@@ -14,7 +14,7 @@ def _max_width_():
 	}}
 	</style>
 	""",
-		unsafe_allow_html=True,
+		unsafe_allow_html=False,
 	)
 
 st.image(
