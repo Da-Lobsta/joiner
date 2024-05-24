@@ -27,7 +27,7 @@ st.title("The Joiner")
 # Uses Streamlit's uploader widget to allow the user to upload a csv
 uploaded_file = st.file_uploader("Upload a the main file - where you want to keep all columns (CSV)",type='csv')
 
-right_file = st.file_uploader("Upload sedondary files - where you want to keep selected columns (CSV)", type='csv', accept_multiple_files=True)
+right_file = st.file_uploader("Upload sedondary files - where you want to keep selected columns (CSV)", type='csv')
 
 
 def column_rename(original_names):
