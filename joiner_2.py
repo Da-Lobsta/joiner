@@ -72,6 +72,7 @@ if uploaded_file and right_file is not None:
 
 	# Creates a dataframe from the uploaded file and creates a list of column names
 	df = pd.read_csv(uploaded_file)
+	df_right = pd.read_csv()
 
 	# Check for completely blank columns
 	blank_columns = df.columns[df.isna().all()].tolist()
@@ -85,13 +86,17 @@ if uploaded_file and right_file is not None:
 
 	original_names = list(df.columns.values)
 
+	original_names_right = list(right_file.columns.values)
+
 	# Creating a list of column names for the user to choose from
 	static_options = column_rename(original_names)
+	right_options = column_rename(original_names_right)
 
 	# Creating lists of column names using Streamlit's multiselect input widget, remove id columns once selected
-	static_column_names = st.multiselect("Please select the ID column names. This is information that you'd like associated with each row instance. Some likely choices are Beauhurst URL, company name, and Companies House ID.",static_options)
+	static_column_names = st.multiselect("Please select the ID column name from the base spreadsheet. This is the unique identifier that you will use to match with the secondary spreadsheet. Some likely choices are Beauhurst URL, company name, and Companies House ID.",static_options)
+	secondary_column_names = st.multiselect("Please select the ID column name from the secondary spreadsheet. This is the unique identifier that you will use to match with the secondary spreadsheet. Some likely choices are Beauhurst URL, company name, and Companies House ID.",right_options)
 	variable_options = variable_rename([x for x in static_options if x not in static_column_names])
-	variable_column_names = st.multiselect("Please select the variable you want to convert from wide to long format. This is data that is stored in several columns that you'd like as a unique row instance. Some likely choices are turnover, headcount, investor info, SIC code, and postcode.",variable_options)
+	variable_column_names = st.multiselect("Please select the columns that you would like to include in the merged spreadsheet. Some likely choices are turnover, headcount, investor info, SIC code, and postcode.",variable_options)
 
 	# Renaming the dataframe columns with the altered names so that it works in the wide_to_long
 	column_dictionary = dict(zip(original_names, static_options))
