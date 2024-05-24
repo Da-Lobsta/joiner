@@ -4,19 +4,6 @@ import re
 
 st.set_page_config(page_icon="🫕", page_title="The Melter")
 
-# def _max_width_():
-# 	max_width_str = f"max-width: 1800px;"
-# 	st.markdown(
-# 		f"""
-# 	<style>
-# 	.reportview-container .main .block-container{{
-# 		{max_width_str}
-# 	}}
-# 	</style>
-# 	""",
-# 		unsafe_allow_html=True,
-# 	) 
-
 st.image(
 	"https://em-content.zobj.net/thumbs/240/apple/325/fondue_1fad5.png",
 	width=100,
