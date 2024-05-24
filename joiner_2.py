@@ -67,12 +67,14 @@ def variable_rename(new_names):
 if uploaded_file and right_file is not None:
 	file_container = st.expander("Check your uploaded CSV")
 	shows = pd.read_csv(uploaded_file)
+	shows_right = pd.read_csv(right_file)
 	uploaded_file.seek(0)
 	file_container.write(shows)
+	file_container.write(shows_right)
 
 	# Creates a dataframe from the uploaded file and creates a list of column names
 	df = pd.read_csv(uploaded_file)
-	df_right = pd.read_csv()
+	df_right = pd.read_csv(right_file)
 
 	# Check for completely blank columns
 	blank_columns = df.columns[df.isna().all()].tolist()
