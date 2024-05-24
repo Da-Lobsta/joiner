@@ -66,7 +66,7 @@ def variable_rename(new_names):
 # If there is a csv, Streamlit shows it in an expandable dataframe
 if uploaded_file and right_file is not None:
 	file_container = st.expander("Check your uploaded CSV")
-	shows = pd.read_csv(uploaded_file)
+	shows = pd.read_csv([uploaded_file, right_file])
 	uploaded_file.seek(0)
 	file_container.write(shows)
 
