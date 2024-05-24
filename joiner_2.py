@@ -88,7 +88,7 @@ if uploaded_file and right_file is not None:
 
 	original_names = list(df.columns.values)
 
-	original_names_right = list(right_file.columns.values)
+	original_names_right = list(df_right.columns.values)
 
 	# Creating a list of column names for the user to choose from
 	static_options = column_rename(original_names)
