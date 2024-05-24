@@ -24,17 +24,17 @@ st.image(
 
 st.title("The Melter")
 
-st.write("""
-The Melter is designed to streamline the process of reshaping data from a wide format to a long format. It's useful for handling CSV files exported from Beauhurst.
+# st.write("""
+# The Melter is designed to streamline the process of reshaping data from a wide format to a long format. It's useful for handling CSV files exported from Beauhurst.
 
-**How it works:**
-1. **Upload a CSV file:** Use the uploader widget to add your Beauhurst exported file.
-2. **Select ID Column Names:** Choose columns that uniquely identify each row (e.g., URLs, company names).
-3. **Select Variable Columns:** Choose the columns that you wish to transform from wide to long format (e.g., turnover, headcount).
-4. **Transform and Download:** Click the button to transform the data and then download the reshaped CSV file.
+# **How it works:**
+# 1. **Upload a CSV file:** Use the uploader widget to add your Beauhurst exported file.
+# 2. **Select ID Column Names:** Choose columns that uniquely identify each row (e.g., URLs, company names).
+# 3. **Select Variable Columns:** Choose the columns that you wish to transform from wide to long format (e.g., turnover, headcount).
+# 4. **Transform and Download:** Click the button to transform the data and then download the reshaped CSV file.
 
-Ensure your CSV file is correctly formatted for optimal performance. The Variable Columns should have unique sequential numbering, eg: 1,2,3 etc. If you encounter any issues, error messages will guide you through potential fixes.
-""")
+# Ensure your CSV file is correctly formatted for optimal performance. The Variable Columns should have unique sequential numbering, eg: 1,2,3 etc. If you encounter any issues, error messages will guide you through potential fixes.
+# """)
 
 
 # Uses Streamlit's uploader widget to allow the user to upload a csv
