@@ -9,7 +9,7 @@ st.image(
 	width=100,
 )
 
-st.title("The Melter")
+st.title("The Joiner")
 
 # st.write("""
 # The Melter is designed to streamline the process of reshaping data from a wide format to a long format. It's useful for handling CSV files exported from Beauhurst.
@@ -25,7 +25,9 @@ st.title("The Melter")
 
 
 # Uses Streamlit's uploader widget to allow the user to upload a csv
-uploaded_file = st.file_uploader("Upload a Beauhurst export file (CSV)",type='csv')
+uploaded_file = st.file_uploader("Upload a the main file - where you want to keep all columns (CSV)",type='csv')
+
+right_file = st.file_uploader("Upload sedondary files - where you want to keep selected columns (CSV)", type='csv', accept_multiple_files=True)
 
 
 def column_rename(original_names):
