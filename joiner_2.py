@@ -4,10 +4,10 @@ import re
 
 st.set_page_config(page_icon="🚬", page_title="The Joiner")
 
-st.image(
-	"https://em-content.zobj.net/thumbs/240/apple/325/fondue_1fad5.png",
-	width=100,
-)
+# st.image(
+# 	"https://em-content.zobj.net/thumbs/240/apple/325/fondue_1fad5.png",
+# 	width=100,
+# )
 
 st.title("The Joiner")
 
