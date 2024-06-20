@@ -3,6 +3,7 @@ import streamlit as st
 import re
 
 st.title("🚬 The Joiner")
+st.set_page_config(page_icon="🚬", page_title="The Joiner")
 
 # ask user for input
 left_file = st.file_uploader("Upload the main file - where you want to keep all columns (CSV)",type='csv')
